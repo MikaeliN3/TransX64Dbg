@@ -57,23 +57,12 @@ jobs:
     - name: Upload x64 (1)
       uses: actions/upload-artifact@v4
       with:
-        name: release-x64-1
-        path: D:\a\TransX64Dbg\TransX64Dbg\TransX64Dbg\x64\Release
+        name: debug-x64-1
+        path: D:\a\TransX64Dbg\TransX64Dbg\TransX64Dbg\x64\Debug
 
     - name: Upload x64 (2)
       uses: actions/upload-artifact@v4
       with:
-        name: release-x64-2
-        path: D:\a\TransX64Dbg\TransX64Dbg\x64\Release
-
-    - name: Upload x86 (1)
-      uses: actions/upload-artifact@v4
-      with:
-        name: release-x86-1
-        path: D:\a\TransX64Dbg\TransX64Dbg\TransX64Dbg\x86\Release
-
-    - name: Upload x86 (2)
-      uses: actions/upload-artifact@v4
-      with:
-        name: release-x86-2
-        path: D:\a\TransX64Dbg\TransX64Dbg\x86\Release
+        name: debug-x64-2
+        path: D:\a\TransX64Dbg\TransX64Dbg\x64\Debug
+        
