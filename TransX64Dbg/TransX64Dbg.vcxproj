@@ -195,10 +195,6 @@
     <ClCompile Include="TransX64Dbg.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="pluginsdk\libx32bridge.a" />
-    <Library Include="pluginsdk\libx32dbg.a" />
-    <Library Include="pluginsdk\libx64bridge.a" />
-    <Library Include="pluginsdk\libx64dbg.a" />
     <Library Include="pluginsdk\x32bridge.lib" />
     <Library Include="pluginsdk\x32dbg.lib" />
     <Library Include="pluginsdk\x64bridge.lib" />
