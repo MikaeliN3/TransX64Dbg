@@ -52,13 +52,28 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       # Add additional options to the MSBuild command line here (like platform or verbosity level).
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
-      run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:OutputPath=bin\Release ${{env.SOLUTION_FILE_PATH}}
-      
-    - name: Test
-      working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: cmd /c dir /s /b
-      
-    - uses: actions/upload-artifact@v4
+      run: msbuild /m ${{env.SOLUTION_FILE_PATH}}
+
+    - name: Upload x64 (1)
+      uses: actions/upload-artifact@v4
       with:
-        name: release
-        path: ${{env.GITHUB_WORKSPACE}}/bin/Release
+        name: release-x64-1
+        path: D:\a\TransX64Dbg\TransX64Dbg\TransX64Dbg\x64\Release
+
+    - name: Upload x64 (2)
+      uses: actions/upload-artifact@v4
+      with:
+        name: release-x64-2
+        path: D:\a\TransX64Dbg\TransX64Dbg\x64\Release
+
+    - name: Upload x86 (1)
+      uses: actions/upload-artifact@v4
+      with:
+        name: release-x86-1
+        path: D:\a\TransX64Dbg\TransX64Dbg\TransX64Dbg\x86\Release
+
+    - name: Upload x86 (2)
+      uses: actions/upload-artifact@v4
+      with:
+        name: release-x86-2
+        path: D:\a\TransX64Dbg\TransX64Dbg\x86\Release
